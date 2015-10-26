@@ -8,5 +8,9 @@ Rails.application.routes.draw do
 
   patch "/items/:id" => "items#mark_as_complete"
 
+  # resources :lists, except: [:destroy] do
+  #   resources :items, only: [:update, :destroy]
+  # end
+
   root "lists#index"
 end
