@@ -3,3 +3,6 @@
 
 <h1><%= @list.name %></h1>
 <p>Created <%= time_ago_in_words @list.created_at %> ago</p>
+
+<!-- <a href="/lists/<%= @list.name %>/create_item">Add an item</a> -->
+<%= link_to "Add an item", "/lists/#{@list.name}/create_item" %>

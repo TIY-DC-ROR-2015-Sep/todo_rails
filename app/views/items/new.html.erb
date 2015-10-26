@@ -1,0 +1,12 @@
+<%= form_tag "/lists/#{@list.name}/create_item" %>
+  <label>
+    Description
+    <!-- <%= text_field_tag "description" %> -->
+    <input type="text" name="description">
+  </label>
+  <label>
+    Due Date
+    <%= date_field_tag "due_date" %>
+  </label>
+  <button>Save</button>
+</form>
