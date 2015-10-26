@@ -1,6 +1,5 @@
 <h1>Create List</h1>
-<form action="<%= create_list_path %>" method="post">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<%= form_tag create_list_path %>
   <label>
     List Name
     <input type="text" name="list_name">
