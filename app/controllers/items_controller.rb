@@ -13,4 +13,10 @@ class ItemsController < ApplicationController
     )
     redirect_to "/lists/#{list.name}"
   end
+
+  def mark_as_complete
+    item = Item.find params[:id]
+    item.is_complete!
+    redirect_to "/lists/#{item.list.name}"
+  end
 end

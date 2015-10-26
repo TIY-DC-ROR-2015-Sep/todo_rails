@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get  "/lists/:list_name/create_item" => "items#new"
   post "/lists/:list_name/create_item" => "items#create"
 
+  patch "/items/:id" => "items#mark_as_complete"
+
   root "lists#index"
 end
