@@ -12,6 +12,6 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find_by_name params[:name]
+    @list = List.find_by_name! params[:name]
   end
 end
