@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% if Rails.env.development? %>
+  <p>
+    <strong>Controller</strong> <%= controller_name %><br>
+    <strong>Action</strong> <%= action_name %><br>
+    <strong>Path</strong> <%= request.path %><br>
+  </p>
+<% end %>
+
 <%= yield %>
 
 </body>
