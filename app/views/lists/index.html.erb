@@ -1,3 +1,11 @@
 <h1>All My Lists</h1>
 
 <a href="/create_list">Create a new list</a>
+
+<ul>
+  <% @lists.each do |l| %>
+    <li>
+      <%= link_to l.name, "/lists/#{l.name}" %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,5 @@
+<!-- <a href="/">Back to root</a> -->
+<%= link_to "Back to root", root_path %>
+
+<h1><%= @list.name %></h1>
+<p>Created <%= time_ago_in_words @list.created_at %> ago</p>
