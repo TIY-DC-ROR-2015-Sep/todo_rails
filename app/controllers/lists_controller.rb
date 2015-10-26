@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    binding.pry
+    l = current_user.lists.create! name: params[:list_name]
+    redirect_to "/lists/#{l.name}"
   end
 end
